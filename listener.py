@@ -38,7 +38,7 @@ class Listener:
         # Call reliable send to send serialized data
         self.reliable_send(command)
         # Close program if exit is specified
-        if command[:4].lower() == 'exit':
+        if command.lower() == 'exit':
             self.connection.close()
             exit()
         # Call reliable receive to receive response
